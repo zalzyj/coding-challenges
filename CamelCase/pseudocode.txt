@@ -1,0 +1,22 @@
+Pseudocode:
+
+Algorithm toCamelCase(str)
+requires:   a string of dash/underscore delimited words
+returns:    a string with camel case format
+    Read every character as var c of str. If c == dash or underscore, delete c and change the following letter to uppercase. 
+
+        var result = "";
+        for (var i = 0; i < str.length; i++) {
+            if ((str.charAt(i) == "-") || (str.charAt(i) == "_")) {
+                i++;
+                result += str.charAt(i).toUpperCase();
+            } else {
+                result += str.charAt(i);
+            }
+        }
+        return result;
+
+Test Examples:
+toCamelCase("the-stealth-warrior") // returns "theStealthWarrior"
+
+toCamelCase("The_Stealth_Warrior") // returns "TheStealthWarrior"

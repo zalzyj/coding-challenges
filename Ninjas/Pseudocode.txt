@@ -1,0 +1,43 @@
+Algorithm ninjaPassed(n, k)
+requires: a number of n ninjas trying to get inside; k is the number of ninjas sneaking past
+returns: how many ninjas you have missed
+
+eg. ninjaPassed(5, 1) = 2      n=5, k=1, noOfCatch=3
+  1        2        3           4         5
+catch              catch                catch
+
+ninjaPassed(6, 1) = 3      n=6, k=1, noOfCatch=3
+  1        2        3          4         5       6
+catch              catch                catch
+
+==============================================
+
+First version:
+
+if (n==0 || k==0) return 0; 
+
+catch first ninja, pointer += k, catch 2nd ninja, then pointer += k; keep doing that until pointer > n;
+
+Step1 - catch first ninja: noOfCatch = 1; pointer = 1;
+Step2 - decide if we can move: 1. if pointer + k > n, noOfCatch keeps the same then stop
+    2. if pointer + (k+1) == n, noOfCatch++ then stop
+    3. if pointer + (k+1) < n, move
+Step3 - move:   noOfCatch++; pointer += k+1;
+                then go back to step2;
+var noOfCatch = 0;
+for (var i=1; i<=n; i+=k+1){
+    noOfCatch++;
+}
+return n-noOfCatch;
+
+===============================================
+
+Another version: contant time
+
+noOfCatch = ((n-1) / (k+1))+1
+eg: n=5, k=1, noOfCatch=3
+    n=6, k=1, noOfCatch=3
+    n=7, k=2, noOfCatch=3
+    n=10000, k=0, noOfCatch=10000
+
+

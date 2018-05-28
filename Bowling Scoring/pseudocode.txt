@@ -1,0 +1,67 @@
+Algorithm bowlingScore(frames)
+requires: an array of Javascript objects
+returns: the total score of the game
+
+    var total = 0;
+    var scores = [];
+    for (var i=0; i<10; i++){
+        if (frames[i].first_roll==10){
+            scores[i] = 10 + getNextTwoRolls(i);
+        } else if (frames[i].first_roll+frames[i].second_roll==10){
+            scores[i] = 10 + getNextRoll(i);
+        } else {
+            scores[i] = frames[i].first_roll+frames[i].second_roll;
+        }    
+    }
+    for (var i=0; i<10; i++){
+        total += scores[i];
+    }
+    return total;
+
+
+
+Algorithm getNextTwoRolls(i)
+requires: the current frame id
+returns: the sum of the next 2 rolls
+    var sum = 0;
+    if (i<9){
+        sum += frames[i+1].first_roll;
+
+        if frames[i+1].second_roll exist{
+            sum += frames[i+1].second_roll;
+        } else {
+            sum += frames[i+2].first_roll;
+        }
+
+    } else {
+        sum += frames[i].second_roll+frames[i].third_roll;
+    }
+    return sum;
+
+Algorithm getNextRoll(i)
+requires: the current frame id
+returns: the score of the next roll
+    var score = 0;
+    if (i<9){
+        score += frames[i+1].first_roll;
+    } else {
+        score += frames[i].third_roll;
+    }
+    return score;
+    
+
+
+
+i: current frame, i is from 0 to 9
+create another array scores[i]
+
+i=0: if "first_roll" is 10, state = "strike"; and add the following 2 rolls to 10; then save the sum 20 into scores[0].
+
+i=1: if  "first_roll"+"second_roll"==10, state = "spare"; add the following 1 roll to 10; then save the sum 19 into scores[1].
+
+i=2: if not in above 2 cases, state = "open"; save the sum of 2 rolls 9 into scores[2].
+... ...
+
+i=9: if "first_roll" is 10, state = "strike"; and add the following 2 rolls to 10; then save the sum 18 into scores[9].
+
+After working out the array scores[i], add all the items together to find the total score.

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>Please input a number <input type="text" id="num"></p>
+    <p><input type="button" value="Factorial" onclick="FirstFactorial()"></p>
+    <p id="show"></p>
+
+    <script>
+        function FirstFactorial() {
+
+            // code goes here  
+            var tex = document.getElementById("num");
+            var i = Number(tex.value);
+            var result = 1;
+
+            while (i > 0) {
+                result *= i;
+                i--;
+            }
+            document.getElementById("show").innerHTML = result;
+
+        }
+    </script>
+</body>
+
+</html>

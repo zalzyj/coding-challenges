@@ -1,0 +1,15 @@
+{
+    "name": "insertion",
+    "version": "1.0.0",
+    "description": "Insertion sort\r     This is the simplest sorting algorithm that builds the final sorted list one item at a time. It is much less efficient on large lists than more advanced algorithms such as quicksort, heapsort, or merge sort. However, insertion sort has the features: 1. Simple implementation; 2. O(n2) same as selection sort or bubble sort;",
+    "main": "insertionSort.js",
+    "scripts": {
+        "test": "mocha || true"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "chai": "^4.1.2",
+        "mocha": "^5.2.0"
+    }
+}

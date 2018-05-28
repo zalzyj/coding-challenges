@@ -19,3 +19,6 @@ JS coding challenges:
   8) Fold an array
 
   9) Ninjas passed
+
+  10) Australian Informatics Olympiad
+      i) Missing Mango (2017 intermediate)

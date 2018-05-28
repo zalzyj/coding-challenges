@@ -1,0 +1,25 @@
+Pseudocode
+
+===========================================
+
+Algorithm mangoLocation(ix, cx, id, cd)
+requires: Ishraq's location, Clement's location, Ishraq's distance to the mango, and Clement's distance to the mango, respectively
+returns: Mongo's location
+
+eg. mangoLocation(ix, cx, id, cd)=mx
+    mangoLocation(2, 6, 1, 3)=3
+first from ix and id, we can work out 2 numbers;
+then from cx and cd, we can work out another 2 numbers.
+
+compare these 4, the common result will be the answer mx.
+
+    var ix1 = ix-id;
+    var ix2 = ix+id;
+    var cx1 = cx-cd;
+    var cx2 = cx+cd;
+
+    if (ix1==cx1) return ix1;
+    if (ix1==cx2) return ix1;
+    if (ix2==cx1) return ix2;
+    if (ix2==cx2) return ix2;
+    return null;

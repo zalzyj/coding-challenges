@@ -1,4 +1,7 @@
 Ninjas
+
+=================================
+
 There are N ninjas trying to get inside, one at a time. You wait and watch carefully, grabbing the first one who comes past. However, in the time it takes you to securely tie up this first ninja, K other ninjas manage to sneak past you. Nevertheless, you persevere, grabbing the next ninja. Again, while you tie them up, K more ninjas sneak past. This continues until all of the ninjas have tried to get in.
 
 In the above example, K=2. That is, for each ninja you tie up, the following two ninjas will sneak past. You catch the first ninja who comes past, and then ninjas #2 and #3 sneak past you. You catch ninja #4, and then ninjas #5 and #6 sneak past you. This repeats until all N ninjas have either been caught or have snuck past you.

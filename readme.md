@@ -2,12 +2,20 @@ JS coding challenges:
 =====================
 
 
-  a) FirstFactorial(num) 
+  1) Factorial(num) 
   
-  b) find all eureka numbers within a range 
+  2) find all eureka numbers within a range 
   
-  c) Human readable working hours 
+  3) Human readable working hours 
   
-  d) Convert string to camel case (Use mocha and chai for unit test) 
+  4) Convert string to camel case (Use mocha and chai for unit test) 
   
-  e) Sort Algorithms: i) insertion sort
+  5) Sort Algorithms: i) insertion sort
+
+  6) Bowling Scoring
+
+  7) Counting Duplicates
+
+  8) Fold an array
+
+  9) Ninjas passed
